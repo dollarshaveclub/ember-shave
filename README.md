@@ -1,27 +1,38 @@
-# Ember-shave
+# ember-shave
 
-This README outlines the details of collaborating on this Ember addon.
+A simple wrapper over DSC's super fast and simple text truncation library called [shave](https://github.com/dollarshaveclub/shave).
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-shave`
-* `npm install`
-* `bower install`
+```
+ember install ember-shave
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Code:
 
-## Running Tests
+```handlebars
+{{#em-shave ~}}
+  Lorem ipsum dolor sit amet, minim molestie argumentum est at, pri legere torquatos instructior ex. Vis id odio atomorum oportere, quem modo fabellas sit at, dicat semper est ne. Apeirian detraxit pri eu. No solum accusam has. Ius ne harum mundi clita, eu pro tation audiam.
+{{/em-shave}}
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+Result:
 
-## Building
+```
+Lorem ipsum dolor sit…
+```
 
-* `ember build`
+_Note: this contrived example assumes a width of 50px_
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+## Gotchas
+
+- **Whitespace control**: In Handlebars, Ember's templating language, [whitespace control](http://handlebarsjs.com/expressions.html#whitespace-control) is done by appending a `~` to the opening tag of your components
+
+- **Use block-style components**: ember-shave assumes you've written your components using the block style. That is, this does not work: {{ em-shave text="Trim me!" }}
+
+## Other Implementations:
+
+- [react-shave](https://www.npmjs.com/package/react-shave)
+- [angular2-shave](https://www.npmjs.com/package/angular2-shave)
