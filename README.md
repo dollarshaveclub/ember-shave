@@ -1,5 +1,7 @@
 # ember-shave
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dollarshaveclub/ember-shave.svg)](https://greenkeeper.io/)
+
 A simple wrapper over DSC's super fast and simple text truncation library called [shave](https://github.com/dollarshaveclub/shave).
 
 ## Installation
