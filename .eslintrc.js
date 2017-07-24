@@ -1,9 +1,8 @@
 module.exports = {
   extends: [
-    'airbnb/base',
-    'plugin:dollarshaveclub/ember'
-  ],
-  plugins: [
     'dollarshaveclub'
-  ]
+  ],
+  env: {
+    browser: true,
+  }
 };

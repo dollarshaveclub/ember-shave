@@ -1,1 +1,1 @@
-export { default } from 'ember-shave/components/em-shave';
+export { default } from 'ember-shave/components/em-shave'
