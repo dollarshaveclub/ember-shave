@@ -1,6 +1,5 @@
 /* jshint node: true */
 'use strict';
-const fastbootTransform = require('fastboot-transform');
 
 module.exports = {
   name: 'ember-shave',
@@ -8,12 +7,7 @@ module.exports = {
   options: {
     nodeAssets: {
       shave: {
-        vendor: {
-          include: ['dist/shave.js'],
-          processTree(input) {
-            return fastbootTransform(input);
-          },
-        },
+        import: ['dist/jquery.shave.min.js'],
       },
     },
   },
