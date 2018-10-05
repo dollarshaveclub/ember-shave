@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "eslint . && ember t"
   },
-  "repository": "",
+  "repository": "https://github.com/dollarshaveclub/ember-shave",
   "engines": {
     "node": ">= 7"
   },
